@@ -34,6 +34,8 @@
 #error "This source file must be compiled with ARC enabled!"
 #endif
 
+#import <OrderedDictionary/OrderedDictionary.h>
+
 #import "SBJson4Parser.h"
 
 @interface SBJson4Parser () <SBJson4StreamParserDelegate>
@@ -52,7 +54,7 @@ typedef enum {
     SBJson4StreamParser *_parser;
     NSUInteger depth;
     NSMutableArray *array;
-    NSMutableDictionary *dict;
+    MutableOrderedDictionary *dict;
     NSMutableArray *keyStack;
     NSMutableArray *stack;
     NSMutableArray *path;
@@ -191,8 +193,8 @@ typedef enum {
 
     if (path)
         [self addToPath];
-    dict = [NSMutableDictionary new];
-	[stack addObject:dict];
+    dict = [MutableOrderedDictionary new];
+    [stack addObject:dict];
     currentType = SBJson4ChunkObject;
 }
 
