@@ -9,7 +9,7 @@
   "description": "    Using this library you can reduce the apparent latency for each\n    download/parse cycle of documents over a slow connection. You can start\n    parsing and feed chunks of the parsed document to your app before the entire\n    document is downloaded.\n\n    Feed the parser one or more chunks of UTF8-encoded data and it will call a\n    block you provide with each root-level document or array. Or, optionally,\n    for each top-level entry in each root-level array.\n\n    This is identical to SBJson v4 except it can be installed alongside SBJson\n    v3.x. This is handy if you want to use version 4 but rely on a library that\n    depends on a previous version.\n",
   "homepage": "http://sbjson.org",
   "source": {
-    "git": "https://github.com/edwardaux/json-framework.git",
+    "git": "https://github.com/edwardaux/json-framework.git"
   },
   "authors": {
     "Stig Brautaset": "stig@brautaset.org"
